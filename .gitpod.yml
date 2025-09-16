@@ -1,0 +1,19 @@
+# .gitpod.yml
+
+image: gitpod/workspace-java:latest
+
+tasks:
+  - name: Install dependencies & build
+    init: mvn clean install
+    command: mvn test
+
+ports:
+  - port: 4444
+    onOpen: ignore  # Selenium Grid / local browser port
+  - port: 8080
+    onOpen: open-preview  # If your project runs a web server
+
+vscode:
+  extensions:
+    - redhat.java
+    - vscjava.vscode-java-pack

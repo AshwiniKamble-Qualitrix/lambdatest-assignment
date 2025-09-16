@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LambdaTestSuite" parallel="classes" thread-count="2">
+
+    <test name="Chrome on Windows">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="browserVersion" value="137.0"/>
+        <parameter name="platformName" value="Windows 10"/>
+        <parameter name="testName" value="Chrome_Windows_Test"/>
+        <classes>
+            <class name="com.lambdatest.tests.LambdaTestAssignment"/>
+        </classes>
+    </test>
+
+    <test name="Edge on macOS">
+        <parameter name="browserName" value="MicrosoftEdge"/>
+        <parameter name="browserVersion" value="137.0"/>
+        <parameter name="platformName" value="macOS Sonoma"/>
+        <parameter name="testName" value="Edge_MacOS_Test"/>
+        <classes>
+            <class name="com.lambdatest.tests.LambdaTestAssignment"/>
+        </classes>
+    </test>
+
+</suite>
